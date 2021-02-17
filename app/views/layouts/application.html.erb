@@ -12,6 +12,14 @@
   </head>
 
   <body>
-    <%= yield %>
+    <nav class="navbar navbar-light bg-light mb-5">
+        <div class="container-fluid">
+          <%= link_to "Flat", flats_path %>
+          <%= link_to "List a flat", new_flat_path %>
+        </div>
+      </nav>
+      <div class="container">
+        <%= yield %>
+      </div>
   </body>
 </html>

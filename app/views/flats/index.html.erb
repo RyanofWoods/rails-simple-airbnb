@@ -1,20 +1,18 @@
 <h1>All of our flats (<%= Flat.count %>)</h1>
 
-<div class="container">
-  <div class="row">
-    <% @flats.each do |flat| %>
-      <div class="col-12 col-md-4 col-lg-3">
-        <div class="card p-3">
-          <h4><%= flat.name %></h4>
-          <p><%= flat.address %></p>
-          <div>
-            <i class="fas fa-users"></i>
-            <p class="d-inline-block"><%= flat.number_of_guests %></p>
-            <i class="fas fa-euro-sign"></i>
-            <p class="d-inline-block"><%= flat.price_per_night %></p>
-          </div>
+<div class="row">
+  <% @flats.each do |flat| %>
+    <div class="col-12 col-md-4 col-lg-3">
+      <div class="card p-3">
+        <h4><%= flat.name %></h4>
+        <p><%= flat.address %></p>
+        <div>
+          <i class="fas fa-users"></i>
+          <p class="d-inline-block"><%= flat.number_of_guests %></p>
+          <i class="fas fa-euro-sign"></i>
+          <p class="d-inline-block"><%= flat.price_per_night %></p>
         </div>
       </div>
-    <% end %>
-  </div>
+    </div>
+  <% end %>
 </div>
