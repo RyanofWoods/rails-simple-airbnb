@@ -1,6 +1,6 @@
 class FlatsController < ApplicationController
 
-  before_action :set_flat, only: [:show]
+  before_action :set_flat, only: [:show, :edit, :update]
   def index
     @flats = Flat.all
   end
@@ -22,6 +22,19 @@ class FlatsController < ApplicationController
   def show
   end
   
+  def edit
+  end
+
+  def update
+    # this check is currently redunant due to the lack of validations on flats
+    if @flat.valid?
+      @flat.update(strong_params)
+      redirect_to flat_path(@flat)
+    else
+      render :edit
+    end
+  end
+
   private
 
   def set_flat
