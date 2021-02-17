@@ -12,6 +12,9 @@
           <i class="fas fa-euro-sign"></i>
           <p class="d-inline-block"><%= flat.price_per_night %></p>
         </div>
+        <div>
+        <p><%= link_to "More info", flat_path(flat) %></p>
+        </div>
       </div>
     </div>
   <% end %>
